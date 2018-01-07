@@ -1,28 +1,41 @@
 {
   "name": "usergt",
-  "version": "0.0.1",
-  "description": "user database queries",
+  "version": "1.0.0",
+  "description": "user db logic -- penseur rethinkdb",
   "main": "lib/index.js",
   "directories": {
-    "test": "test"
+    "lib": "lib"
   },
   "scripts": {
-    "test": "test"
+    "test": "lab -a code -t 100 -L -m 0 -v",
+    "start": "node ./lib/consumer.js",
+    "purge": "node ./lib/purge.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/propadata/usergt.git"
+    "url": "git+https://github.com/zoe-1/usergt.git"
   },
   "keywords": [
-    "user",
-    "database",
-    "query",
-    "rethinkdb"
+    "rethinkdb",
+    "penseur",
+    "usergt"
   ],
   "author": "Jon Swenson",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/propadata/usergt/issues"
+    "url": "https://github.com/zoe-1/usergt/issues"
   },
-  "homepage": "https://github.com/propadata/usergt#readme"
+  "homepage": "https://github.com/zoe-1/usergt#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "boom": "^7.1.1",
+    "hoek": "^5.0.2",
+    "joi": "^13.0.2",
+    "penseur": "^8.3.0"
+  },
+  "devDependencies": {
+    "code": "^5.1.2",
+    "items": "^2.1.1",
+    "lab": "^15.1.2"
+  }
 }
